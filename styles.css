@@ -1,0 +1,105 @@
+/****** main content *********/
+
+body {
+	font-family: 'Lora', georgia, serif;
+	font-size: 17px;
+	line-height: 1.5em;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	font-size: 14px;
+}
+
+img {
+  height: 49vh;
+  width: 100vw; 
+  margin: 0;
+  padding: 0;
+  object-fit: cover; 
+ }
+
+#title {
+	font-family: 'Abril Fatface', georgia, cursive;
+	font-size: 40px;
+	line-height: 1em;
+}
+
+#title, #summary, #moreinfo {
+	padding-right: 40px;
+	padding-left: 20px;
+}
+
+/* set up the CSS grid layout */
+
+.imgdiv {
+	grid-area: img;
+}
+
+.text {
+	grid-area: txt;
+}
+
+.tab {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-areas:
+		"img"
+		"txt";
+}
+
+.onecol #text {
+	text-align: center;
+	vertical-align: center;
+	padding-left: 15%;
+	padding-right: 15%;
+	padding-top: 8%;
+}
+
+/* media rules for responsive layout */
+
+@media (min-width: 750px) {
+	img {
+	    height: 100vh;
+	    width: 49vw; 
+	}
+
+	.twocol {
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas:
+			"img txt"
+	}
+
+	.twocol #title {
+		font-size: 50px;
+	}
+	
+	.onecol {
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			"txt"
+	}
+
+	.onecol p {
+		font-size: 18px;
+	}
+
+	.onecol #title {
+		font-size: 70px;
+	}
+}
+
+@media (min-width: 950px) {
+	.twocol #title {
+		font-size: 60px;
+	}
+
+	.onecol #title {
+		font-size: 90px;
+	}
+}
+
+
+
+
