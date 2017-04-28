@@ -4,7 +4,7 @@
 // if unable to retrieve info online, display local image
 var getLocalFem = function(callback) {
 	console.log("getLocalFem");
-	var random = Math.floor((Math.random() * 3));
+	var random = Math.floor((Math.random() * 4));
 
 	var img = "/imgs/" + random + ".jpg";
 	callback("", "", img, "");
