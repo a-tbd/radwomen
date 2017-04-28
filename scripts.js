@@ -120,7 +120,7 @@ var updateFem = function() {
 
 		// display summary on new tab page
 		if (extract != "") {
-			$("#summary").html(extract);
+			$("#summary").html(filterXSS(extract));
 		}
 
 		// display fem name on new tab page
